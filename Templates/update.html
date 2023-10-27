@@ -1,0 +1,22 @@
+{% extends 'admin_temp/index.html' %}
+{% load crispy_forms_filters %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="text-center caption" style="color:rgb(242, 156, 27);">Update To-Do</h1>
+        </div>
+        <div class="col-md-8">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form|crispy }}
+<!--                {{ form.title|as_crispy_field }}-->
+<!--                {{ form.task|as_crispy_field }}-->
+<!--                {{ form.date|as_crispy_field }}-->
+<!--                {{form.date.errors}}-->
+                <input type="submit" class="btn btn-primary font-weight-bold btn-lg btn-block rounded-0 border-0" style="background-color:rgb(242, 156, 27);" value="UPDATE"/>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

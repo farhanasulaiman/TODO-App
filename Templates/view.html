@@ -1,0 +1,38 @@
+{% extends 'admin_temp/index.html' %}
+{% load crispy_forms_filters %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="text-center caption" style="color:rgb(242, 156, 27);">To-Do List</h1>
+        </div>
+        <div class="col-md-8">
+        <table class="table w-auto mt-4">
+              <tr class="table-secondary text-center">
+                <th>Title</th>
+                <th>Task</th>
+                  <th>Due Date</th>
+                <th>Update</th>
+                <th>Delete</th>
+              </tr>
+              {% for row in data %}
+              <tr>
+                <td>{{row.title}}</td>
+                <td>{{row.task}}</td>
+                  <td>{{row.date}}</td>
+                <td><form action="{% url 'updttask' row.id %}" class="d-inline-block">
+                  <button type="submit" class="btn btn-primary rounded-0 border-0" style="background-color:rgb(242, 156, 27);">UPDATE</button>
+                </form>
+                </td>
+                <td><form action="{% url 'deltask' row.id %}" method="POST" class="d-inline-block">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-primary rounded-0 border-0" style="background-color:rgb(242, 156, 27);">DELETE</button>
+                  </form>
+                </td>
+              </tr>
+              {% endfor %}
+        </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

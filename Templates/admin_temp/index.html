@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TO DO</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href=" {% static 'assets1/vendors/mdi/css/materialdesignicons.min.css' %} ">
+    <link rel="stylesheet" href=" {% static 'assets1/vendors/css/vendor.bundle.base.css' %} ">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href=" {% static 'assets1/vendors/jvectormap/jquery-jvectormap.css' %} ">
+    <link rel="stylesheet" href=" {% static 'assets1/vendors/flag-icon-css/css/flag-icon.min.css' %} ">
+    <link rel="stylesheet" href=" {% static 'assets1/vendors/owl-carousel-2/owl.carousel.min.css' %} ">
+    <link rel="stylesheet" href=" {% static 'assets1/vendors/owl-carousel-2/owl.theme.default.min.css' %} ">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href=" {% static 'assets1/css/style.css' %} ">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href=" {% static 'assets1/images/todo.png' %} " />
+  </head>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+<!--          <a class="sidebar-brand brand-logo" href=" {% static 'index.html' %} "><img src=" {% static 'assets1/images/logo.svg' %} " alt="logo" /></a>-->
+<!--          <a class="sidebar-brand brand-logo-mini" href=" {% static 'index.html' %} "><img src=" {% static 'assets1/images/logo-mini.svg' %} " alt="logo" /></a>-->
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_navbar.html -->
+        <nav class="navbar p-0 fixed-top d-flex flex-row">
+          <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+            <a class="navbar-brand brand-logo-mini" href=" {% static 'index.html' %} "><img src=" {% static 'assets1/images/logo-mini.svg' %} " alt="logo" /></a>
+          </div>
+          <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+            <ul class="navbar-nav navbar-nav-right">
+              <li class="nav-item nav-settings d-none d-lg-block">
+                <a class="nav-link" href="{% url 'index' %}">
+                  <i class="mdi mdi-home"></i>
+                </a>
+              </li>
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+              <span class="mdi mdi-format-line-spacing"></span>
+            </button>
+          </div>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            {% block content %}
+            {% endblock %}
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+          <footer class="footer">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
+              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Bootstrap admin templates</a> from Bootstrapdash.com</span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src=" {% static 'assets1/vendors/js/vendor.bundle.base.js' %} "></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src=" {% static 'assets1/vendors/chart.js/Chart.min.js' %} "></script>
+    <script src=" {% static 'assets1/vendors/progressbar.js/progressbar.min.js' %} "></script>
+    <script src=" {% static 'assets1/vendors/jvectormap/jquery-jvectormap.min.js' %} "></script>
+    <script src=" {% static 'assets1/vendors/jvectormap/jquery-jvectormap-world-mill-en.js' %} "></script>
+    <script src=" {% static 'assets1/vendors/owl-carousel-2/owl.carousel.min.js' %} "></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src=" {% static 'assets1/js/off-canvas.js' %} "></script>
+    <script src=" {% static 'assets1/js/hoverable-collapse.js' %} "></script>
+    <script src=" {% static 'assets1/js/misc.js' %} "></script>
+    <script src=" {% static 'assets1/js/settings.js' %} "></script>
+    <script src=" {% static 'assets1/js/todolist.js' %} "></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src=" {% static 'assets1/js/dashboard.js' %} "></script>
+    <!-- End custom js for this page -->
+  </body>
+</html>
